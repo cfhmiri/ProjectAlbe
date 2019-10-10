@@ -17,18 +17,18 @@
     return $conn;
   }
   
-  function createDB()
+  function createDB($conn, $dbName)
   {
-    $conn = getDBConnection();
     // Create database ProjectAlbe
-    $sql = "CREATE DATABASE ProjectAlbe";
+    $sql = "CREATE DATABASE $dbName";
     if (mysqli_query($conn, $sql)) {
-      echo "Database created successfully";
+      echo "Database $dbName created successfully";
     } else {
       echo "Error creating database: " . mysqli_error($conn);
     }
 
-    mysqli_close($conn);
+   
+    return $conn;
   }
 
   function connectDB()
