@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ced3d8;
+}
+
+.header{
+    padding-left: 100px;
+    color: black;
+    text-align: left;
+    background-color: #ced3d8;
+    line-height: 50px;
+}
+
+.user{
+    background-color: #ced3d8;
+    line-height: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+
+.card {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    background-color: yellow;
+    transition: transform .6s linear
+}
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+    background-color: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content{
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+}
+
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+div.col-lg-4.card{
+    margin: 50px;
+    padding: 0;
+    background-color: #ced3d8;
+    border: none;
+}
