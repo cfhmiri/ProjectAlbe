@@ -1,6 +1,6 @@
 <?php
 
-require_once "utilityAlbe.php";
+require "utilityAlbe.php";
 
 // Creazione tabella utenti
 $sqlCreateUserTable = "CREATE TABLE utenti (
