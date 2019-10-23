@@ -1,5 +1,4 @@
 <?php
-
 require "utilityAlbe.php";
 
 // Creazione tabella utenti
